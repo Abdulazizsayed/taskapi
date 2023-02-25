@@ -6,5 +6,9 @@ class TaskSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Task
-        fields = "__all__"
-        depth = 1
+        fields = (
+            "title",
+            "description",
+            "due_date",
+            "is_completed"
+        )
